@@ -8,6 +8,7 @@ public class GulimallMemberApplicationTests {
 
   @Test
   void contextLoads() {
+    //menber后台服务搭建
   }
 
 }
