@@ -29,6 +29,7 @@ public class GulimallProductApplicationTests {
 //    brandEntity.setDescript("Test修改1");
 //    brandService.updateById(brandEntity);
     //Test branch
+    //product后台服务搭建
     List<BrandEntity> brand_id = brandService.list(new QueryWrapper<BrandEntity>().eq("brand_id", 1L));
     brand_id.forEach((item)->{
       System.out.println(item);
