@@ -74,4 +74,18 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
 
     return children;
   }
+
+  /**
+   * 三级分类模块删除功能实现
+   * @param asList
+   */
+  @Override
+  public void reMoveMenuByIds(List<Long> asList) {
+    //TODO 1、检查当前删除的菜单，是否被别的菜单引用
+
+
+    baseMapper.deleteBatchIds(asList);
+  }
+
+
 }

@@ -2,7 +2,7 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.46.132:3306/gulimall_pms?serverTimezone=GMT%2B8&useSSL=false&characterEncoding=utf-8&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://192.168.46.134:3306/gulimall_pms?serverTimezone=GMT%2B8&useSSL=false&characterEncoding=utf-8&allowPublicKeyRetrieval=true
     username: root
     password: "root"
   cloud:
@@ -14,6 +14,10 @@ mybatis-plus:
   global-config:
     db-config:
       id-type: auto
+      logic-delete-value: 1 #逻辑删除，1代表已删除，0代表未删除
+      logic-not-delete-value: 0
 server:
   port: 10000
-
+logging:
+  level:
+    com.zyb.gulimall: debug
